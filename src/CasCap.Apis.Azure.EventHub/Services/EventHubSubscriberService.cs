@@ -131,8 +131,8 @@ public abstract class EventHubSubscriberService<T> : IEventHubSubscriberService<
         try
         {
             _logger.LogDebug("Error in the EventProcessorClient");
-            _logger.LogDebug($"\tOperation: { args.Operation }");
-            _logger.LogDebug($"\tException: { args.Exception }");
+            _logger.LogDebug($"\tOperation: {args.Operation}");
+            _logger.LogDebug($"\tException: {args.Exception}");
             _logger.LogDebug("");
         }
         catch

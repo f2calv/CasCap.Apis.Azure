@@ -1,11 +1,13 @@
 namespace CasCap.Tests;
 
-public class AzQueueStorageTests : TestBase {
+public class AzQueueStorageTests : TestBase
+{
 
     public AzQueueStorageTests(ITestOutputHelper output) : base(output) { }
 
     [Fact]
-    public async Task AzQueue() {
+    public async Task AzQueue()
+    {
         string inputTestString = nameof(inputTestString);
 
         var testObj = new TestMessage { testString = inputTestString };
@@ -29,7 +31,8 @@ public class AzQueueStorageTests : TestBase {
     }
 }
 
-public class TestMessage {
+public class TestMessage
+{
     public Guid id { get; set; } = Guid.NewGuid();
     public DateTime dt { get; set; } = DateTime.UtcNow;
     public string? testString { get; set; }

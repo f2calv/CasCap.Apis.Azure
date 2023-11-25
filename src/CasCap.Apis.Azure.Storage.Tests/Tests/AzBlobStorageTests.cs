@@ -1,6 +1,7 @@
 ﻿namespace CasCap.Tests;
 
-public class AzBlobStorageTests : TestBase {
+public class AzBlobStorageTests : TestBase
+{
 
     public AzBlobStorageTests(ITestOutputHelper output) : base(output) { }
 

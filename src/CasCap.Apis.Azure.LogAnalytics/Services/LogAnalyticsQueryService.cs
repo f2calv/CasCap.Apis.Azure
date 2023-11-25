@@ -49,7 +49,7 @@ public class LogAnalyticsQueryService : ILogAnalyticsQueryService
         //var query = "availabilityResults | summarize count() by name, bin(duration,500) | order by _count desc";
         //var metric = "availabilityResults/duration";
 
-        var queryResults = await _client.QueryWorkspaceAsync( _logAnalyticsOptions.WorkspaceId, query, timeRange);
+        var queryResults = await _client.QueryWorkspaceAsync(_logAnalyticsOptions.WorkspaceId, query, timeRange);
         //var queryResults = await _client.Query.ExecuteAsync(_appInsightsOptions.ApiApplicationId, query, timespan);
         foreach (var row in queryResults.Value.Table.Rows)
         {
